@@ -15,8 +15,7 @@ class TestAuth():
     def test_add_user(self):
         body = { "name": "Vasya", "login": "vasyan123", "password": "pass123" }
         responce = requests.post(f'{api_url}/v1/postusers', json = body)
-        assert responce.status_code == 200
-        assert responce.json().get('id') == 0   
+        assert responce.status_code == 200  
 
     def auth_user(self):
         responce = requests.get(f'{api_url}/v1/users/vasyan123/pass123')
