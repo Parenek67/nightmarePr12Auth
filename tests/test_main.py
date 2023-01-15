@@ -12,7 +12,7 @@ class TestAuth():
         assert responce.status_code == 200
         assert len(responce.json()) == 0
 
-    def add_user(self):
+    def test_add_user(self):
         body = { "name": "Vasya", "login": "vasyan123", "password": "pass123" }
         responce = requests.post(f'{api_url}/v1/postusers', json = body)
         assert responce.status_code == 200
