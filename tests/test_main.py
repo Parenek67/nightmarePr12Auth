@@ -10,7 +10,7 @@ class TestAuth():
     def test_get_users(self):
         responce = requests.get(f'{api_url}/v1/users')
         assert responce.status_code == 200
-        assert len(responce.json()) == 0
+        assert len(responce.json()) == 50
 
     def test_add_user(self):
         body = { "name": "Vasya", "login": "vasyan123", "password": "pass123" }
